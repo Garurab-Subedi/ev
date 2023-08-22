@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class OnbaordingController extends GetxController {
-  //TODO: Implement OnbaordingController
+class CheckSignController extends GetxController {
+  //TODO: Implement CheckSignController
 
   final count = 0.obs;
   @override

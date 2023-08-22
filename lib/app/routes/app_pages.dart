@@ -1,9 +1,11 @@
 import 'package:get/get.dart';
 
+import '../modules/check_sign/bindings/check_sign_binding.dart';
+import '../modules/check_sign/views/check_sign_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/onbaording/bindings/onbaording_binding.dart';
-import '../modules/onbaording/views/onbaording_view.dart';
+import '../modules/onboarding/bindings/onboarding_binding.dart';
+import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 
@@ -26,9 +28,14 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.ONBAORDING,
-      page: () => const OnbaordingView(),
-      binding: OnbaordingBinding(),
+      name: _Paths.ONBOARDING,
+      page: () => const OnboardingView(),
+      binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHECK_SIGN,
+      page: () => const CheckSignView(),
+      binding: CheckSignBinding(),
     ),
   ];
 }
