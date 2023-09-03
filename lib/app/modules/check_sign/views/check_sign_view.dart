@@ -160,7 +160,7 @@ class CheckSignView extends GetView<CheckSignController> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.offAllNamed(Routes.SIGNUP);
+                  Get.toNamed(Routes.SIGNUP);
                 },
                 child: Text(
                   'Sign Up',
