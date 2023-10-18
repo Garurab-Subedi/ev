@@ -1,15 +1,15 @@
 import 'package:get/get.dart';
 
-import '../modules/check_sign/bindings/check_sign_binding.dart';
-import '../modules/check_sign/views/check_sign_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/logIn/bindings/log_in_binding.dart';
+import '../modules/logIn/views/log_in_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/otp/bindings/otp_binding.dart';
 import '../modules/otp/views/otp_view.dart';
-import '../modules/signup/bindings/signup_binding.dart';
-import '../modules/signup/views/signup_view.dart';
+import '../modules/register/bindings/register_binding.dart';
+import '../modules/register/views/register_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
 
@@ -37,19 +37,19 @@ class AppPages {
       binding: OnboardingBinding(),
     ),
     GetPage(
-      name: _Paths.CHECK_SIGN,
-      page: () => const CheckSignView(),
-      binding: CheckSignBinding(),
-    ),
-    GetPage(
-      name: _Paths.SIGNUP,
-      page: () => const SignupView(),
-      binding: SignupBinding(),
-    ),
-    GetPage(
       name: _Paths.OTP,
       page: () => const OtpView(),
       binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER,
+      page: () => RegisterView(),
+      binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOG_IN,
+      page: () => LogInView(),
+      binding: LogInBinding(),
     ),
   ];
 }
