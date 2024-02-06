@@ -25,11 +25,10 @@ class RegisterController extends GetxController {
 
   @override
   void onClose() {
-    super.onClose();
-
     usernameController.dispose();
     emailController.dispose();
     passwordController.dispose();
+    super.onClose();
   }
 
   void checkRegister() {
@@ -49,7 +48,7 @@ class RegisterController extends GetxController {
   register() async {
     try {
       var response =
-          await http.post(Uri.parse('${baseurl}api/auth/register'), body: {
+          await http.post(Uri.parse('$baseurl/api/auth/register'), body: {
         "username": usernameController.text,
         "email": emailController.text,
         "password": passwordController.text

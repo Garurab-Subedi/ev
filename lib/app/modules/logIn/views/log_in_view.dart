@@ -79,7 +79,7 @@ class LogInView extends GetView<LogInController> {
                           ),
                         ),
                         child: TextField(
-                          controller: controller.emailController,
+                          // controller: controller.emailController,
                           autocorrect: false,
                           style: regular.copyWith(
                             fontSize: 12,
@@ -112,7 +112,7 @@ class LogInView extends GetView<LogInController> {
                           ),
                         ),
                         child: TextField(
-                          controller: controller.passwordController,
+                          // controller: controller.passwordController,
                           autocorrect: false,
                           obscureText: true,
                           style: regular.copyWith(
@@ -148,7 +148,7 @@ class LogInView extends GetView<LogInController> {
                         height: 15,
                       ),
                       ElevatedButton(
-                        onPressed: controller.checklogin,
+                        onPressed: () {},
                         child: const SizedBox(
                           height: 50,
                           child: Center(
