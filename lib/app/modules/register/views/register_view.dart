@@ -166,7 +166,7 @@ class RegisterView extends GetView<RegisterController> {
                         height: 15,
                       ),
                       ElevatedButton(
-                        onPressed: () => controller.checkRegister,
+                        onPressed: () => controller.checkRegister(),
                         child: const SizedBox(
                           height: 50,
                           child: Center(

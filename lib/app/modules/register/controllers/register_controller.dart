@@ -47,16 +47,16 @@ class RegisterController extends GetxController {
 
   register() async {
     try {
-      var response =
-          await http.post(Uri.parse('$baseurl/api/auth/register'), body: {
-        "username": usernameController.text,
-        "email": emailController.text,
-        "password": passwordController.text
-      });
+      var response = await http.post(Uri.parse('$baseurl/api/auth/register'),
+          headers: {'Content-Type': 'application/json'},
+          body: jsonEncode({
+            "username": usernameController.text,
+            "email": emailController.text,
+            "password": passwordController.text
+          }));
 
       var res = await jsonDecode(response.body);
-
-      if (res != null && res['success'] != null && res['success']) {
+      if (response.statusCode == 200) {
         customSnackbar('Sucess', res['message'], 'success');
         Get.offAllNamed(Routes.LOG_IN);
       } else {
