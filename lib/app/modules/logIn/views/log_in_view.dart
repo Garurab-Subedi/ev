@@ -148,7 +148,7 @@ class LogInView extends GetView<LogInController> {
                         height: 15,
                       ),
                       ElevatedButton(
-                        onPressed: () => controller.checklogin(),
+                        onPressed: () => controller.checkLogin(),
                         child: const SizedBox(
                           height: 50,
                           child: Center(

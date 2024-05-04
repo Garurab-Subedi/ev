@@ -33,7 +33,7 @@ class OtpView extends GetView<OtpController> {
                     height: 10,
                   ),
                   Text(
-                    'We have sent an OTP code to Phone number ********09. Enter the OTP code below to continue.',
+                    'We have sent an OTP code to Email ********09. Enter the OTP code below to continue.',
                     style: regular.copyWith(
                       fontSize: 12,
                     ),
@@ -168,8 +168,22 @@ class OtpView extends GetView<OtpController> {
                             '48s',
                             style: regular.copyWith(
                                 fontSize: 12, color: Colors.blue),
-                          )
+                          ),
                         ],
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      ElevatedButton(
+                        // onPressed: () => controller.checkRegister(),
+                        onPressed: controller
+                            .verifyOtp, // Call verifyOtp method on button press,
+                        child: const SizedBox(
+                          height: 50,
+                          child: Center(
+                            child: Text('Veify Account'),
+                          ),
+                        ),
                       ),
                     ],
                   )

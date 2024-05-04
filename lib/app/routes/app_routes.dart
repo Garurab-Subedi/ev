@@ -12,6 +12,12 @@ abstract class Routes {
   static const OTP = _Paths.OTP;
   static const REGISTER = _Paths.REGISTER;
   static const LOG_IN = _Paths.LOG_IN;
+  static const MAIN = _Paths.MAIN;
+  static const STATION = _Paths.STATION;
+  static const NEAREST_LOCATION = _Paths.NEAREST_LOCATION;
+  static const LOCATION = _Paths.LOCATION;
+  static const STATION_DETAILS = _Paths.STATION_DETAILS;
+  static const BOOKING = _Paths.BOOKING;
 }
 
 abstract class _Paths {
@@ -25,4 +31,10 @@ abstract class _Paths {
   static const OTP = '/otp';
   static const REGISTER = '/register';
   static const LOG_IN = '/log-in';
+  static const MAIN = '/main';
+  static const STATION = '/station';
+  static const NEAREST_LOCATION = '/nearest-location';
+  static const LOCATION = '/location';
+  static const STATION_DETAILS = '/station-details';
+  static const BOOKING = '/booking';
 }

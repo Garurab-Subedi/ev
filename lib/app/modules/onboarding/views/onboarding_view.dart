@@ -68,7 +68,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     )
                   : GestureDetector(
                       onTap: () {
-                        Get.offAllNamed(Routes.REGISTER);
+                        Get.offAllNamed(Routes.LOG_IN);
                       },
                       child: Container(
                         height: 55,

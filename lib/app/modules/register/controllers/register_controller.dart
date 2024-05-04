@@ -4,6 +4,7 @@ import 'package:ev/app/routes/app_pages.dart';
 import 'package:ev/app/utils/baseurl.dart';
 import 'package:ev/app/utils/custom_snackbar.dart';
 import 'package:ev/app/widgets/Loader.dart';
+
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -46,24 +47,21 @@ class RegisterController extends GetxController {
   }
 
   register() async {
-    try {
-      var response = await http.post(Uri.parse('$baseurl/api/auth/register'),
-          headers: {'Content-Type': 'application/json'},
-          body: jsonEncode({
-            "username": usernameController.text,
-            "email": emailController.text,
-            "password": passwordController.text
-          }));
+    var response = await http.post(Uri.parse('$baseurl/api/auth/register'),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          "username": usernameController.text,
+          "email": emailController.text,
+          "password": passwordController.text
+        }));
 
-      var res = await jsonDecode(response.body);
-      if (response.statusCode == 200) {
-        customSnackbar('Sucess', res['message'], 'success');
-        Get.offAllNamed(Routes.LOG_IN);
-      } else {
-        customSnackbar('Error', res['message'], 'error');
-      }
-    } catch (e) {
-      print('error: $e');
+    var res = await jsonDecode(response.body);
+
+    if (response.statusCode == 200) {
+      customSnackbar('Sucess', res['message'], 'success');
+      Get.offAllNamed(Routes.LOG_IN);
+    } else {
+      customSnackbar('Error', res['message'], 'error');
     }
   }
 }
